@@ -15,6 +15,8 @@ const store = new Vuex.Store({
             ]
         }
     },
+
+
     mutations:{
         addElem(state){
             //countの数だけElementを追加する
