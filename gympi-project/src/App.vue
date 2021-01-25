@@ -25,7 +25,7 @@
 
 <script>
 import Element from './components/Element.vue'
-import Header from './components/Header.vue'
+import Header from './components/Headermenu.vue'
 import Modal from './components/Modal.vue'
 
 export default {
