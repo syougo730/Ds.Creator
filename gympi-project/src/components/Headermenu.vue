@@ -16,6 +16,7 @@ export default {
       doUpdate(){
           this.$store.dispatch('doUpdate','Ds.Creator verVue')
       }
+      
   },
     props: {
     },

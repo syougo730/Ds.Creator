@@ -42,6 +42,7 @@ const store = new Vuex.Store({
     actions:{
         doUpdate({commit},appname){
             commit('setAppname',{ appname })
+            console.log(store.appname)
         }
     },
 

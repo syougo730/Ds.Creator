@@ -23,7 +23,7 @@ export default {
         group:Number,
         value:Number,
         name_ja:String,
-        name_em:String,
+        name_en:String,
     },
 }
 </script>
