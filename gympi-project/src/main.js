@@ -14,9 +14,7 @@ new Vue({
     fx:Fx,
   },
   created:{
-    init_set:function () {
-      this.$store.mutations.addElem
-    }
+    
   }
 }).$mount('#app')
 

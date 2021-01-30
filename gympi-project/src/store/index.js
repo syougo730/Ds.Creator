@@ -16,9 +16,14 @@ const store = new Vuex.Store({
         }
     },
 
+    getters:{
+        //appnameを使用するゲッター
+        appname(state){return state.appname}
+
+    },
 
     mutations:{
-        addElem(state){
+        /* addElem(state){
             //countの数だけElementを追加する
             console.log(state.fx.count);
             for (var i = 0; i < state.fx.count ; i++) {
@@ -26,8 +31,21 @@ const store = new Vuex.Store({
                 state.fx.element.$set(this.fx.element[i].group, 'Ⅱ')
                 state.fx.element.$set(this.fx.element[i].value, 'B')
             }
+        } */
+
+        setAppname(state,payload){
+            state.appname = payload.appname;
         }
-    }
+
+    },
+
+    actions:{
+        doUpdate({commit},appname){
+            commit('setAppname',{ appname })
+        }
+    },
+
+
 
 });
 export default store;
