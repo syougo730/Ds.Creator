@@ -1,8 +1,10 @@
 <template>
   <div id="app">
-    <Header></Header>
+    <Header 
+      :appname="appname"
+    />
     <div v-for="(n,key) in count" :key="key"
-        @click="openModal()">
+        >
       <Element 
         :cnt="n"
         :group="0.0"
@@ -41,14 +43,17 @@ export default {
     },
     group(n){
       return this.$store.state.fx.element[n].group
+    },
+    appname(){
+      return this.$store.state.appname
     }
   },
-  data(){
+  /* data(){
     return{
       modal:false,
       message:''
     }
-  },
+  }, */
   props:{
   },
   methods:{

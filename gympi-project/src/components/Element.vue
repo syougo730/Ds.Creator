@@ -2,7 +2,7 @@
     <div>
         <div class="waza">
             <div class="num">{{cnt}}</div>
-            <div class="element btn"  :data-num="cnt">
+            <div class="element btn"  :data-num="cnt" @click="openModal()">
               <span class="name_ja">{{name_ja}}</span><br>
               <span class="name_en">{{name_en}}</span>
             </div>
@@ -25,6 +25,23 @@ export default {
         name_ja:String,
         name_en:String,
     },
+  methods:{
+    openModal() {
+      this.modal = true
+    },
+    closeModal() {
+      this.modal = false
+    },
+    doSend() {
+      if (this.message.length > 0) {
+        alert(this.message)
+        this.message = ''
+        this.closeModal()
+      } else {
+        alert('メッセージを入力してください')
+      }
+    }
+  }
 }
 </script>
 

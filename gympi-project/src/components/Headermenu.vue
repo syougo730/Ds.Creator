@@ -9,17 +9,23 @@
 
 export default {
   name:'Header',
-  computed:{
-      appname(){return this.$store.getters.appname}
+  props: {
+      appname:String,
   },
+  /* computed:{
+      appname(){return this.$store.getters.appname}
+  },*/
   created:{
       doUpdate(){
           this.$store.dispatch('doUpdate','Ds.Creator verVue')
       }
       
-  },
-    props: {
-    },
+  }, 
+  method:{
+      doUpdate(){
+          this.$store.dispatch('doUpdate','Ds.Creator verVue')
+      }
+  }
 }
 </script>
 

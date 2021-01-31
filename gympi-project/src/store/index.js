@@ -8,6 +8,10 @@ const store = new Vuex.Store({
     state: {
         appname:'Ds.Creator',
         version:'3.0.0',
+        modal:{
+            openflg:false,
+            message:'',
+        },
         fx: {
             count: 3,//技数
             element: [
@@ -40,9 +44,9 @@ const store = new Vuex.Store({
     },
 
     actions:{
-        doUpdate({commit},appname){
-            commit('setAppname',{ appname })
-            console.log(store.appname)
+        doUpdate(context,payload){
+            context.commit('setAppname', { payload })
+            
         }
     },
 
