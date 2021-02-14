@@ -3,8 +3,7 @@
     <Header 
       :appname="appname"
     />
-    <div v-for="(n,key) in count" :key="key"
-        >
+    <div v-for="(n,key) in count" :key="key" @click="openModal()">
       <Element 
         :cnt="n"
         :group="0.0"
