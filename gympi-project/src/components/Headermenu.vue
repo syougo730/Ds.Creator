@@ -1,7 +1,7 @@
 <template>
 
     <header>
-        <h1 class="header-title">{{ appname }}</h1>
+        <h1 class="header-title">Ds.Creator</h1>
     </header>
 
 </template>
@@ -9,23 +9,6 @@
 
 export default {
   name:'Header',
-  props: {
-      appname:String,
-  },
-  /* computed:{
-      appname(){return this.$store.getters.appname}
-  },*/
-  created:{
-      doUpdate(){
-          this.$store.dispatch('doUpdate','Ds.Creator verVue')
-      }
-      
-  }, 
-  method:{
-      doUpdate(){
-          this.$store.dispatch('doUpdate','Ds.Creator verVue')
-      }
-  }
 }
 </script>
 

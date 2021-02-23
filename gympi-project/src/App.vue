@@ -21,6 +21,13 @@
       </template>
     </Modal>
 
+    <div v-for="(n,key) in fx['element'].length" :key="key">
+      {{ fx.element[key].key }}
+      {{ fx.element[key].name }}
+      {{ fx.element[key].group }}
+      {{ fx.element[key].vv }}
+    </div>
+
   </div>
 </template>
 
@@ -28,24 +35,20 @@
 import Element from './components/Element.vue'
 import Header from './components/Headermenu.vue'
 import Modal from './components/Modal.vue'
+import Fx from '../public/json/fxList.json'
 
 export default {
   name: 'App',
+  data(){
+    return{
+      fx:Fx,
+      count:3,
+    }
+  },
   components: {
     Element,
     Modal,
     Header,
-  },
-  computed:{
-    count(){
-      return this.$store.state.fx.count
-    },
-    group(n){
-      return this.$store.state.fx.element[n].group
-    },
-    appname(){
-      return this.$store.state.appname
-    }
   },
   /* data(){
     return{
