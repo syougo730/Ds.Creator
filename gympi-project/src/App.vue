@@ -3,7 +3,7 @@
     <Header 
       :appname="appname"
     />
-    <div v-for="(n,key) in count" :key="key" @click="openModal()">
+    <div v-for="(n,key) in count" :key="key">
       <Element 
         :cnt="n"
         :group="0.0"
@@ -43,6 +43,7 @@ export default {
     return{
       fx:Fx,
       count:3,
+      modal:false,
     }
   },
   components: {

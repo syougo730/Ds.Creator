@@ -18,6 +18,11 @@
 
 export default {
   name:'Element',
+    data(){
+      return{
+        modal:false,
+      }
+    },
     props: {
         cnt: Number,
         group:Number,
@@ -27,7 +32,8 @@ export default {
     },
   methods:{
     openModal() {
-      this.modal = true
+      this.modal = true;
+      this.$emit("modal",this.modal);
     },
     closeModal() {
       this.modal = false
